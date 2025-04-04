@@ -28,6 +28,7 @@ export default [
         'warn',
         { allowConstantExport: true },
       ],
+      'rule/prop-types':"off"
     },
   },
 ]
