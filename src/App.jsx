@@ -12,8 +12,18 @@ const App = () => {
             return;
          }
         const newArray =[...inputArr];
-        newArray[index]=value.slice(-1)
-        setInputArr(newArray)
+        const newValue = value.trim();
+        newArray[index]=newValue.slice(-1)
+        setInputArr(newArray);
+        newValue && refArr.current[index+1]?.focus();
+
+  }
+  function handleOnKeyDown(e,index){
+     if(!e.target.value && e.key=='Backspace')
+     {
+         refArr.current[index-1]?.focus();
+     }
+
   }
   return (
     <div>
@@ -27,6 +37,7 @@ const App = () => {
             ref = {(input)=>{refArr.current[index]=input}}
             className='border rounded-sm border-gray-300 w-12 h-12 text-center'
             onChange={(e)=>handleOnChnage(e.target.value,index)}
+            onKeyDown={(e)=>{handleOnKeyDown(e,index)}}
            
           />
         ))}
