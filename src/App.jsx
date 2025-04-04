@@ -1,7 +1,11 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 const digitCount = 5;
 const App = () => {
   const [inputArr,setInputArr] = useState(new Array(digitCount).fill(""));
+  const refArr = useRef([]);
+  useEffect(()=>{
+      refArr.current[0]?.focus();
+  },[])
   function handleOnChnage(value,index){
          if(isNaN(value))
          {
@@ -20,6 +24,7 @@ const App = () => {
             key={index}
             type='text'
             value={input}
+            ref = {(input)=>{refArr.current[index]=input}}
             className='border rounded-sm border-gray-300 w-12 h-12 text-center'
             onChange={(e)=>handleOnChnage(e.target.value,index)}
            
