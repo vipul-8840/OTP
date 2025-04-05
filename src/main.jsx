@@ -6,11 +6,13 @@ import Ref from './Ref.jsx'
 import Toggle from './toggle.jsx'
 import Mount from './Mounting/Mount.jsx'
 import Memo from './Hooks/Memo.jsx'
+import Callback from './Hooks/Usecallback.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     {/* <Ref/> */}
     {/* <Mount/> */}
-    <Memo/>
+    {/* <Memo/> */}
+    <Callback/>
   </StrictMode>,
 )
