@@ -5,10 +5,12 @@ import App from './App.jsx'
 import Ref from './Ref.jsx'
 import Toggle from './toggle.jsx'
 import Mount from './Mounting/Mount.jsx'
+import Memo from './Hooks/Memo.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     {/* <Ref/> */}
-    <Mount/>
+    {/* <Mount/> */}
+    <Memo/>
   </StrictMode>,
 )
