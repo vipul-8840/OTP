@@ -13,7 +13,7 @@ const App = () => {
          }
         const newArray =[...inputArr];
         const newValue = value.trim();
-        newArray[index]=newValue.slice(-1)
+        newArray[index]=newValue.slice(-1);
         setInputArr(newArray);
         newValue && refArr.current[index+1]?.focus();
 

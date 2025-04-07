@@ -13,14 +13,13 @@ function Callback() {
     setCounterTwo(counterTwo + 1);
   };
 
+  // Memoized callback
   const fun = useCallback(() => {
     console.log("hello vipul");
   }, [counterTwo]);
 
 
-  useEffect(() => {
-    fun(); 
-  }, [fun]);
+  
 
   return (
     <>
