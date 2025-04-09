@@ -9,6 +9,26 @@ import Memo from './Hooks/Memo.jsx'
 import Callback from './Hooks/Usecallback.jsx'
 import Context from './Hooks/Context.jsx'
 import Counter from './Hoc/Counter.jsx'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import Layout from './Router/Layout/Layout.jsx'
+import About from './Router/About/About.jsx'
+import Home from './Router/Home/Home.jsx'
+
+const router = createBrowserRouter([{
+  path:"/",
+  element:<Layout/>,
+  children:[
+    {
+      path:"home",
+      element:<Home/>
+    },
+    {
+      path:"about",
+      element:<About/>
+    }
+  ]
+}]
+)
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -16,7 +36,8 @@ createRoot(document.getElementById('root')).render(
     {/* <Mount/> */}
     {/* <Memo/> */}
     {/* <Context/> */}
-    <Counter/>
+    {/* <Counter/> */}
     {/* <Callback/> */}
+    <RouterProvider router={router}/>
   </StrictMode>,
 )

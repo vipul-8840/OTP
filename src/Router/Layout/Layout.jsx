@@ -4,11 +4,12 @@ import { Outlet } from 'react-router-dom'
 import Footer from '../Footer/footer'
 
 const Layout = () => {
+  
   return (
     <div>
         <Header/>
         <Outlet/>
-        <Footer/>
+        <Footer/> 
       
     </div>
   )
