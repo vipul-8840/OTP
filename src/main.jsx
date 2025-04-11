@@ -13,19 +13,22 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Layout from './Router/Layout/Layout.jsx'
 import About from './Router/About/About.jsx'
 import Home from './Router/Home/Home.jsx'
+import User from './Router/User/User.jsx'
 
 const router = createBrowserRouter([{
   path:"/",
   element:<Layout/>,
   children:[
     {
-      path:"home",
+      path:"",
       element:<Home/>
     },
     {
-      path:"about",
-      element:<About/>
-    }
+      path:"/user/:userId",
+      element:<User/>
+    },
+    
+
   ]
 }]
 )

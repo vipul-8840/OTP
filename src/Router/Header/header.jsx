@@ -11,7 +11,7 @@ const Header = () => {
     <div className="flex space-x-6">
       <Link
         className="text-lg text-orange-700 hover:text-orange-900 transition-colors duration-200"
-        to="home"
+        to=""
       >
         Home
       </Link>
